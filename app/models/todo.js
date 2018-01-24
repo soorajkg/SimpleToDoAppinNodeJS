@@ -1,7 +1,11 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-module.exports = mongoose.model('Todo', {
+
+var todoSchema = new Schema({
 	text : String,
 	done : Boolean,
 	date : Date
 });
+
+module.exports = mongoose.model('Todo', todoSchema);
